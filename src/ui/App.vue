@@ -47,7 +47,8 @@ const feedback = computed(() => {
 });
 
 watch(
-  () => [props.state.phase, props.state.index, props.state.failures, props.state.seed] as const,
+  // a string, so that the watcher fires on a change of these, not on every tick of the stopwatch
+  () => `${props.state.phase}/${props.state.index}/${props.state.failures}/${props.state.seed}`,
   () => {
     const { phase, last } = props.state;
     typed.value = "";

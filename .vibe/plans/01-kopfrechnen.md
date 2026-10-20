@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: interactive
 # Current phase. Allowed values: explore, plan, code, commit. Change the value line below, never this comment.
-phase: code
+phase: commit
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks. Never change it.
@@ -242,12 +242,12 @@ fitness:
 - [x] Daten `settings.ts` und Fehlermeldungen (Deutsch, in Message-Dateien); Commit.
 - [x] Oberfläche: Start (Einstellungen, Routen), Aufgabe (Auswahl und Eingabe, Tastatur, 360 px), Ende; Commit.
 - [x] Spielerisches Aussehen, Dunkelmodus, reduzierte Bewegung; statische Startseite mit Erklärung; Commit.
-- [ ] The content guide matches what was built (`app-content-matches`).
-- [ ] `npx lernapps check` passes.
-- [ ] Look at a screenshot of every screen and state (start, each mode, pause, end), desktop and 360 px. Compare
+- [x] The content guide matches what was built (`app-content-matches`).
+- [x] `npx lernapps check` passes.
+- [x] Look at a screenshot of every screen and state (start, each mode, pause, end), desktop and 360 px. Compare
       each with the confirmed sketches.
-- [ ] Every box of Explore, Plan and Code ticked.
-- [ ] Set `phase: commit`: change the value line (`grep '^phase:'` prints `phase: commit`).
+- [x] Every box of Explore, Plan and Code ticked.
+- [x] Set `phase: commit`: change the value line (`grep '^phase:'` prints `phase: commit`).
 
 ### Completed
 
