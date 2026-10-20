@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/interactive/playthrough.v1.schema.json
+# A round of Mal with the numbers to 1000 chosen: the options of the first task, the stopwatch with its seconds and a
+# change of the settings that is ignored once the round has begun.
+route: mal
+seed: 3
+steps:
+  - inputs:
+      - { kind: action, name: set-range, value: 1000 }
+      - { kind: action, name: set-count, value: 5 }
+      - { kind: action, name: set-range, value: 500 }
+      - { kind: action, name: begin }
+    state: { phase: playing, index: 0, failures: 0 }
+  - ticks: 125
+    state: { elapsed: 2500 }
+  - inputs: [{ kind: action, name: set-range, value: 100 }, { kind: action, name: toggle-op, value: plus }]
+    state: { phase: playing, index: 0 }

@@ -1,0 +1,22 @@
+{
+  "name": "kopfrechnen",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "check": "lernapps check",
+    "prepare": "lernapps hooks"
+  },
+  "devDependencies": {
+    "@doctc/arc42": "0.36.1",
+    "@lernapps/app-templates": "github:lernapps/app-templates#f28d02036d0fdff868a56c5e5458a56de1a684c5",
+    "@lernapps/tooling": "github:lernapps/tooling#9dd7b276de11fd769d214b92d8b6a534dec732a4",
+    "typescript": "6.0.3",
+    "vite-plus": "1.0.0",
+    "vue-tsc": "3.3.11"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.0.0"
+  }
+}

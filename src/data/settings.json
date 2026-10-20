@@ -1,0 +1,14 @@
+{
+  "routes": {
+    "plus": { "ops": ["plus"] },
+    "minus": { "ops": ["minus"] },
+    "mal": { "ops": ["mal"] },
+    "geteilt": { "ops": ["geteilt"] },
+    "gemischt": { "ops": ["plus", "minus", "mal", "geteilt"] }
+  },
+  "defaults": { "range": 100, "count": 10, "terms": 2, "mode": "choice", "timer": true },
+  "ranges": [100, 1000],
+  "counts": [5, 10, 15, 20],
+  "terms": [2, 3, 4],
+  "maxFailures": 3
+}

@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/interactive/playthrough.v1.schema.json
+# A round of Plus with five tasks (26 + 24, 39 + 25, 46 + 54, 18 + 52, 21 + 32): a wrong answer for a forgotten ten
+# and one for a slip, a third failed attempt that ends the task with its solution, the right answers, the stopwatch
+# that stops with the round, the next round and the way back to the settings.
+route: plus
+seed: 1
+steps:
+  - inputs:
+      - { kind: action, name: set-count, value: 5 }
+      - { kind: action, name: begin }
+    state: { phase: playing, index: 0, failures: 0, elapsed: 0, last: start }
+  - inputs: [{ kind: action, name: answer, value: 40 }]
+    state: { index: 0, attempts: 1, failures: 1, last: wrong, mistake: carry }
+  - ticks: 50
+    state: { elapsed: 1000 }
+  - inputs: [{ kind: action, name: answer, value: 49 }]
+    state: { index: 0, attempts: 2, failures: 2, last: wrong, mistake: slip }
+  - inputs: [{ kind: action, name: answer, value: "41" }]
+    state: { index: 1, attempts: 0, failures: 3, last: reveal, mistake: "" }
+  - inputs: [{ kind: action, name: answer, value: 64 }]
+    state: { index: 2, failures: 3, last: right }
+  - inputs:
+      - { kind: action, name: answer, value: 100 }
+      - { kind: action, name: answer, value: 70 }
+      - { kind: action, name: answer, value: 53 }
+    state: { phase: done, index: 5, failures: 3, last: right }
+  - ticks: 50
+    state: { phase: done, elapsed: 1000 }
+  - inputs: [{ kind: action, name: again }]
+    state: { phase: playing, seed: 2, index: 0, failures: 0, elapsed: 0, last: start }
+  - inputs: [{ kind: action, name: settings }]
+    state: { phase: setup, last: setup }
