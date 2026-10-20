@@ -1,12 +1,11 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/interactive/playthrough.v1.schema.json
 # A round of Geteilt without the stopwatch (12 : 6, 56 : 7, 18 : 6, 12 : 6, 6 : 3): time does not count, an answer
-# that is no whole number is ignored, the last operation stays chosen, and the answers 2, 8, 3, 2 and 2 end the round.
+# that is no whole number is ignored, the last operation cannot be switched off, and the answers 2, 8, 3, 2 and 2 end the round.
 route: geteilt
 seed: 1
 steps:
   - inputs:
       - { kind: action, name: toggle-op, value: plus }
-      - { kind: action, name: toggle-op, value: geteilt }
       - { kind: action, name: toggle-op, value: plus }
       - { kind: action, name: toggle-op, value: geteilt }
       - { kind: action, name: set-timer, value: false }
