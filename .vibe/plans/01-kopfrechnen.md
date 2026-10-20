@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks. Never change it.
-failedChecks: { checks-pass: 2 }
+failedChecks: { checks-pass: 3 }
 ---
 
 # Plan: <app name>, first version
@@ -230,18 +230,18 @@ fitness:
 
 - [x] Load skill `lernapps-check`. Create the app in this plan's folder as it says. `create` keeps this plan. Never
       write the app by hand.
-- [ ] Load skill `lernapps-github-setup`. Put the app on GitHub as it says: repo, branches, Pages, the app committed
+- [x] Load skill `lernapps-github-setup`. Put the app on GitHub as it says: repo, branches, Pages, the app committed
       on `work`, the preview pull request. Give the creator the preview link once.
-- [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method"
+- [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method"
       (`app-content-guide`). `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` prints 0. Commit it before
       any content.
-- [ ] Load skill `lernapps-<archetype>` and the content guide. Questions with options and feedback: also skill
+- [x] Load skill `lernapps-<archetype>` and the content guide. Questions with options and feedback: also skill
       `lernapps-content-questions`.
-- [ ] Kern (`src/core`): Aufgaben aus Seed erzeugen (vier Rechenarten, Wertebereiche), Antwort prüfen, Fehlversuche, Rundenende, Stoppuhr-Ticks; Commit.
-- [ ] Durchspiele für alle Rechenarten, Rundenende und gemischte Runde; Commit.
-- [ ] Daten `settings.ts` und Fehlermeldungen (Deutsch, in Message-Dateien); Commit.
-- [ ] Oberfläche: Start (Einstellungen, Routen), Aufgabe (Auswahl und Eingabe, Tastatur, 360 px), Ende; Commit.
-- [ ] Spielerisches Aussehen, Dunkelmodus, reduzierte Bewegung; statische Startseite mit Erklärung; Commit.
+- [x] Kern (`src/core`): Aufgaben aus Seed erzeugen (vier Rechenarten, Wertebereiche), Antwort prüfen, Fehlversuche, Rundenende, Stoppuhr-Ticks; Commit.
+- [x] Durchspiele für alle Rechenarten, Rundenende und gemischte Runde; Commit.
+- [x] Daten `settings.ts` und Fehlermeldungen (Deutsch, in Message-Dateien); Commit.
+- [x] Oberfläche: Start (Einstellungen, Routen), Aufgabe (Auswahl und Eingabe, Tastatur, 360 px), Ende; Commit.
+- [x] Spielerisches Aussehen, Dunkelmodus, reduzierte Bewegung; statische Startseite mit Erklärung; Commit.
 - [ ] The content guide matches what was built (`app-content-matches`).
 - [ ] `npx lernapps check` passes.
 - [ ] Look at a screenshot of every screen and state (start, each mode, pause, end), desktop and 360 px. Compare
