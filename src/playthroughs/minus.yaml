@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/interactive/playthrough.v1.schema.json
+# A round of Minus with the Zehnerübergang mistake: 50 − 26 answered with 36 (each column the smaller digit from the
+# larger), then 34 (a ten too many), then the right 24; the options are the right result and typical mistakes.
+route: minus
+seed: 1
+steps:
+  - inputs:
+      - { kind: action, name: set-count, value: 5 }
+      - { kind: action, name: begin }
+    state: { phase: playing, index: 0 }
+  - inputs: [{ kind: action, name: answer, value: 36 }]
+    state: { index: 0, attempts: 1, failures: 1, last: wrong, mistake: columns }
+  - inputs: [{ kind: action, name: answer, value: 34 }]
+    state: { index: 0, attempts: 2, failures: 2, last: wrong, mistake: carry }
+  - inputs: [{ kind: action, name: answer, value: 24 }]
+    state: { index: 1, attempts: 0, failures: 2, last: right, mistake: "" }
