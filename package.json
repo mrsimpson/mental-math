@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "@doctc/arc42": "0.38.0",
-    "@lernapps/app-templates": "github:lernapps/app-templates#5799517f88beb74864f2a41da6f609af3b56d25a",
-    "@lernapps/tooling": "github:lernapps/tooling#df005ee5770f3619cfd6bef9db444afa4a83ac7d",
+    "@lernapps/app-templates": "github:lernapps/app-templates#790096c58c3b7c6b03c17df7e8da97d4550f1866",
+    "@lernapps/tooling": "github:lernapps/tooling#77cea5085eaea639890a8cc3e7f86db044d5c9f1",
     "typescript": "6.0.3",
     "vite-plus": "1.0.0",
     "vue-tsc": "3.3.14"
